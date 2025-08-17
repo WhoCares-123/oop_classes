@@ -1,20 +1,18 @@
-import 'package:flutter/material.dart';
+import 'person.dart';
+import 'student.dart';
+import 'teacher.dart';
+import 'course.dart';
 
 void main() {
-  runApp(const MainApp());
-}
+  var p1 = Person("Alice", 25);
+  p1.showInfo();
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  var s1 = Student("ST101", "Computer Science");
+  s1.showInfo();
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
-    );
-  }
+  var t1 = Teacher("Mathematics", 50000);
+  t1.showInfo();
+
+  var c1 = Course("OOP", 3);
+  c1.showInfo();
 }
